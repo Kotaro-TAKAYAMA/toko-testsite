@@ -48,7 +48,7 @@ h2 {
 
 
 
-@media (max-width: 640px) {/* 640px以下*/
+@media (max-width: 695px) {/* 640px以下*/
   body {
     font-size: 1.2rem;
   }
@@ -397,7 +397,7 @@ p {
 
 
 /* レスポンシブ。introの位置変更とTwitterとYouTubeを横並び */
-@media (min-width:650px) {
+@media (min-width:695px) {
   .intro {
     width: 80%;
     max-width: 900px;
