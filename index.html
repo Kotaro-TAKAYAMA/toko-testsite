@@ -201,13 +201,10 @@
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-    var browser= confirm("お使いのブラウザは閲覧推奨環境ではありません。\nウェブサイトが正しく表示されない、動作しない等の現象が起こる場合があります。\nMicrosoft Edgeで開きますか？");
-    }
-    if (browser) {
+        var browser= confirm("お使いのブラウザは閲覧推奨環境ではありません。\nウェブサイトが正しく表示されない、動作しない等の現象が起こる場合があります。\nMicrosoft Edgeで開きますか？");
+        if (browser) {
         location.href = 'microsoft-edge:https://kotaro-takayama.github.io/toko-testsite/';
-    }else{
-        alert("ウェブサイトが正しく表示されない、動作しない等の現象が起こる場合があります。\nあらかじめご了承ください。");
-    }
+    }} 
 </script>
 
 
