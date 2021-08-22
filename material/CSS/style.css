@@ -131,9 +131,9 @@ p {
 }
 
 
-/* top_linkを右に寄せる都合上間にスペース入れる */
+/* top_linkを右に寄せる都合上、間にスペース入れる */
 .space {
-	flex-grow:1;
+	flex:1 1 0;
 }
 
 .top_link {
