@@ -25,9 +25,9 @@
 
     
 <script>
-    var pw = window.prompt("合言葉を入力してください。");
+    var pw = prompt("合言葉を入力してください。");
     if (pw==="shinjuku") {}else{
-        window.alert("違います。JR東日本トップページにご案内します。");
+        alert("違います。JR東日本トップページにご案内します。");
         location.href = 'https://www.jreast.co.jp/';
     }
 </script>
@@ -110,7 +110,7 @@
 
 
 
-    <div>
+    <main>
         <div id="main_visual">
             <div class="slider">
                 <div class="slider_item"><img src="./material/img/visual01-min.jpg" alt="高輪ゲートウェイ駅" title="高輪ゲートウェイ駅"></div>
@@ -128,7 +128,6 @@
                 <p>お客さまの求める安全で品質の高いサービスを提供するとともに、地域の発展に貢献します。</p>
             </div>
         </div>
-
         <div id="top_info">
             <div class="twitter">
                 <h2>東京工事事務所 公式Twitter</h2>
@@ -168,8 +167,10 @@
                 </div>
                 <p>※本動画の内容は東京支社のホームドア整備に関するものですが、同様の工事を東京工事事務所でも実施しています。</p>
             </div>
+
+        
         </div>
-    </div>
+    </main>
         
     <footer id="global_footer"><p class="footer_link"><a href="https://www.jreast.co.jp/site/rules.html" target="_blank" title="別ウィンドウで開きます">
         <img src="./material/img/ico_square.png" alt="別ウィンドウで開きます">
@@ -195,17 +196,20 @@
     });
 </script>
 
-
-
 <!-- ie非推奨アラート -->
 <script>
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-    alert("お使いのブラウザは閲覧推奨環境ではありません。\nウェブサイトが正しく表示されない、動作しない等の現象が起こる場合がありますので予めご了承ください。\nChrome・Edge等の推奨ブラウザのご利用をおすすめいたします。");
-    location.href = 'microsoft-edge:https://www.jreast.co.jp/';
+    var browser= confirm("お使いのブラウザは閲覧推奨環境ではありません。\nウェブサイトが正しく表示されない、動作しない等の現象が起こる場合があります。\nMicrosoft Edgeで開きますか？");
+    }
+    if (browser) {
+        location.href = 'microsoft-edge:https://kotaro-takayama.github.io/toko-testsite/';
+    }else{
+        alert("ウェブサイトが正しく表示されない、動作しない等の現象が起こる場合があります。\nあらかじめご了承ください。");
     }
 </script>
+
 
 
 </body>

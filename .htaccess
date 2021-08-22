@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "password"
-AuthUserFile "https://github.com/Kotaro-TAKAYAMA/toko-testsite/blob/main/.htpasswd"
-require valid-user
