@@ -110,6 +110,7 @@ p {
   align-items: center;
   padding: 0;
   margin: 0 20px;
+  width: 175px;
 }
 
 .corp_logo a:hover {
@@ -306,12 +307,8 @@ p {
 }
 
 
-/*最低限のie対応（レイアウト調整）*/
+/*最低限のie対応（イメージ非表示）*/
 @media all and (-ms-high-contrast: none) {
-  /* ここに書く */
-  .corp_logo a {
-    width: 175px;
-  }
   .top_link img, #menu img {
     display: none;
   }
