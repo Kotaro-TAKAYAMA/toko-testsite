@@ -290,9 +290,9 @@ p {
 /* header・navレスポンシブ対応 */
 
 @media (min-width: 695px) {
-  /* .top_link span{
-    display: inline;
-  } */
+  .top_link span{
+    display: block;
+  }
 
   /* ロゴとタイトルを横並び */
   #menu ul li a {
