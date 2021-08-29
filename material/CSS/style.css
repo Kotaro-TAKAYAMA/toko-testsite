@@ -92,7 +92,7 @@ p {
   position: relative; /*これないとz-indexが設定できない*/
   z-index: 1000;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   height: 50px;
   background-color: #333;
 }
@@ -133,8 +133,9 @@ p {
 
 
 /* top_linkを右に寄せる都合上、間にスペース入れる */
-.space {
-	flex:1 1 0;
+.top_links {
+  height: 100%;
+  display: flex;
 }
 
 .top_link {
@@ -142,7 +143,6 @@ p {
   display: flex;
   align-items: center;
   margin:0 15px;
-  flex:0 0 1;
 }
 
 
