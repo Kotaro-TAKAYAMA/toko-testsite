@@ -24,13 +24,13 @@
     <link rel="stylesheet" href="./material/CSS/style.css">
 
     
-<script>
+<!-- <script>
     var pw = prompt("合言葉を入力してください。");
     if (pw==="shinjuku") {}else{
         alert("違います。JR東日本トップページにご案内します。");
         location.href = 'https://www.jreast.co.jp/';
     }
-</script>
+</script> -->
 
 </head>
 
@@ -90,21 +90,17 @@
                     <li><a href="https://www.jreast.co.jp/toko/work_01.html"><span>プロジェクトの流れ</span></a></li>
                     <li><a href="https://www.jreast.co.jp/toko/work_02.html"><span>鉄道クレーン</span></a></li>
                     <li><a href="https://www.jreast.co.jp/toko/work_03.html"><span>技術開発</span></a></li>
-                    <li><a href="#"><span>社員紹介</span></a>
-                        <ul>
-                            <li><a href="https://www.jreast.co.jp/toko/work_04.html"><span>土木系社員</span></a></li>
-                            <li><a href="https://www.jreast.co.jp/toko/work_05.html"><span>建築系社員</span></a></li>
-                            <li><a target="_blank" href="https://www.jreast.co.jp/recruit/new-graduate/member/"><span>新卒採用（本社ページ）</span></a></li>
-                            <li><a target="_blank" href="https://www.jreast.co.jp/recruit/career/member/"><span>中途採用（本社ページ）</span></a></li>
-                        </ul>
-                    </li>
                 </ul>
             </li>
             <li><a href="#"><img src=".//material/img/nav4.svg" alt="採用情報"><span>採用情報</span></a>
                 <ul>
                     <li><a target="_blank" href="http://www.jreast.co.jp/recruit/"><span>本社採用ページ</span></a></li>
+                    <li><a href="https://www.jreast.co.jp/toko/work_04.html"><span>土木系社員紹介</span></a></li>
+                    <li><a href="https://www.jreast.co.jp/toko/work_05.html"><span>建築系社員紹介</span></a></li>
                 </ul>
             </li>
+        </ul>
+    </li>
         </ul>    
     </nav>
 
@@ -123,9 +119,9 @@
                 <div class="slider_item"><img src="./material/img/visual08-min.jpg" alt="新宿駅東西自由通路 改札切替" title="新宿駅東西自由通路 改札切替"></div>
             </div>
             <div class="intro">
-                <h1>明日の"日常"をつくる。</h1>
-                <p>私達はJR東日本のインハウスエンジニア集団として、首都圏の駅・鉄道施設の新設・大規模改良を行っています。</p>
-                <p>お客さまの求める安全で品質の高いサービスを提供するとともに、地域の発展に貢献します。</p>
+                <h1>明日を、つくる。</h1>
+                <p>私達はJR東日本のインハウスエンジニア集団として、首都圏・上信越エリアの駅・鉄道施設の新設・大規模改良を行っています。</p>
+                <p>お客さまの求める安全で品質の高いサービスを提供するとともに、すべての人の心豊かな生活の実現に貢献します。</p>
             </div>
         </div>
         <div id="top_info">
@@ -156,11 +152,6 @@
                     <iframe src="https://www.youtube.com/embed/9BAY0CMiIoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <!-- 高輪GW -->
                 </div>
-                <div class="video">
-                    <!-- 渋谷切替（鉄建YouTube） -->
-                    <iframe src="https://www.youtube.com/embed/5LXIQKm3XaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <p>※工事を受注した鉄建建設の紹介映像です。</p>
                 <div class="video">
                     <!-- ホームドア（東京支社） -->
                     <iframe src="https://www.youtube.com/embed/cai2W3aexeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -196,16 +187,7 @@
     });
 </script>
 
-<!-- ie非推奨アラート -->
-<script>
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-        var browser= confirm("お使いのブラウザは閲覧推奨環境ではありません。\nウェブサイトが正しく表示されない、動作しない等の現象が起こる場合があります。\nMicrosoft Edgeで開きますか？");
-        if (browser) {
-        location.href = 'microsoft-edge:https://kotaro-takayama.github.io/toko-testsite/';
-    }} 
-</script>
+
 
 
 
