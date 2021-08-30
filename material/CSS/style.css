@@ -442,21 +442,18 @@ p {
   margin: 0;
 } */
 
-/* .footer_link {
-  border-top: 2px solid ;
-} */
 
-/* #global_footer .corp_logo {
+
+#global_footer .corp_logo {
   background: #333;
-} */
+}
 
-/* #global_footer .corp_logo a{
+#global_footer .corp_logo a{
   margin: 0 10px;
-} */
+}
 
 .footer_link {
   border-top: 1px solid #ddd;
-  /* border-bottom: 1px solid #eee; */
   max-width: 1080px;
   padding: 10px;
 }
@@ -468,7 +465,7 @@ p {
 }
 
 .footer_link ul li {
-  /* border-radius: 4px; */
+  border-radius: 4px;
   width: 300px;
   display: block;
   margin: 2px 2px;
