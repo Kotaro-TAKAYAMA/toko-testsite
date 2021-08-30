@@ -24,13 +24,13 @@
     <link rel="stylesheet" href="./material/CSS/style.css">
 
     
-<!-- <script>
+<script>
     var pw = prompt("合言葉を入力してください。");
     if (pw==="shinjuku") {}else{
         alert("違います。JR東日本トップページにご案内します。");
         location.href = 'https://www.jreast.co.jp/';
     }
-</script> -->
+</script>
 
 </head>
 
@@ -38,7 +38,7 @@
 
 <body>
 
-    <header id="header">
+    <header class="header">
         <div class="corp_logo">
             <a href="#">
                 <img src="./material/img/logo_jr.svg" alt="JR東日本">
@@ -49,13 +49,11 @@
             <div class="top_link">
                 <a href="https://twitter.com/JREast_official?s=20" target="_blank" rel="noopener noreferrer">
                     <img src="./material/img/twitter.svg" alt="Twitter">
-                    <span>東京工事事務所 公式Twitter</span>
                 </a>
             </div>
             <div class="top_link">
                 <a href="https://www.youtube.com/channel/UCioFlMsGwVfA-uWnn0ZWo_Q" target="_blank" rel="noopener noreferrer">
-                    <img src="./material/img/youtube.svg" alt="YouTube">
-                    <span>JR東日本 公式YouTube</span>
+                    <img src="./material/img/youtube.svg">
                 </a>
             </div>
         </div>
@@ -159,15 +157,46 @@
                 </div>
                 <p>※本動画の内容は東京支社のホームドア整備に関するものですが、同様の工事を東京工事事務所でも実施しています。</p>
             </div>
-
-        
         </div>
     </main>
-        
-    <footer id="global_footer"><p class="footer_link"><a href="https://www.jreast.co.jp/site/rules.html" target="_blank" title="別ウィンドウで開きます">
-        <img src="./material/img/ico_square.png" alt="別ウィンドウで開きます">
-        JR東日本ウェブサイトのサイトのご利用にあたって</a></p>
-        <p class="copyright">Copyright© 2021 JR East -Tokyo Construction Office All Rights Reserved.</p>
+    
+    <footer id="global_footer">
+        <div class="header">
+            <div class="corp_logo">
+                <a href="#">
+                    <img src="./material/img/logo_jr.svg" alt="JR東日本">
+                    <span>東京工事事務所</span>
+                </a>
+            </div>
+            <div class="top_links">
+                <div class="top_link">
+                    <a href="https://twitter.com/JREast_official?s=20" target="_blank" rel="noopener noreferrer">
+                        <img src="./material/img/twitter.svg" alt="Twitter"></a>
+                </div>
+                <div class="top_link">
+                    <a href="https://www.youtube.com/channel/UCioFlMsGwVfA-uWnn0ZWo_Q" target="_blank" rel="noopener noreferrer">
+                        <img src="./material/img/youtube.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_link">
+            <!-- <h2>リンク</h2> -->
+            <ul>
+                <li><a href="https://www.jreast.co.jp/"><img src="./material/img/ico_square.png" alt="別ウィンドウで開きます"><span>JR東日本 公式サイト</span></a></li>
+                <li><a href="https://www.jreast.co.jp/construction/"><img src="./material/img/ico_square.png" alt="別ウィンドウで開きます"><span>進行中の建設プロジェクト</span></a></li>
+                <li><a href="https://www.jreast.co.jp/newtech/"><img src="./material/img/ico_square.png" alt="別ウィンドウで開きます"><span>建設プロジェクトを支える新技術</span></a></li>
+                <li><a href="https://www.jreast.co.jp/joshinko/"><img src="./material/img/ico_square.png" alt="別ウィンドウで開きます"><span>JR東日本 上信越工事事務所</span></a></li>
+                <li><a href="https://www.jreast.co.jp/tohokusho/"><img src="./material/img/ico_square.png" alt="別ウィンドウで開きます"><span>JR東日本 東北工事事務所</span></a></li>
+                <li><a href="https://www.jreast.co.jp/tesco/"><img src="./material/img/ico_square.png" alt="別ウィンドウで開きます"><span>JR東日本 東京電気システム開発工事事務所</span></a></li>
+            </ul>
+        </div>
+        <div class="policy">
+            <p class="policy_link"><a href="https://www.jreast.co.jp/site/rules.html" target="_blank" title="別ウィンドウで開きます">
+            <img src="./material/img/ico_square.png" alt="別ウィンドウで開きます">
+            JR東日本ウェブサイトのサイトのご利用にあたって</a></p>
+            <p class="copyright">Copyright© 2021 JR East -Tokyo Construction Office All Rights Reserved.</p>
+        </div>
     </footer>
 
 <!-- jqueryの読み込み -->
