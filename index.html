@@ -50,12 +50,31 @@
     　　})
     </script>
 
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+    　　$(function(){
+        $("#header").load("common.html #header");
+    　　})
+    </script>
+
+    <script type="text/javascript">
+    　　$(function(){
+        $("#menu").load("common.html #menu");
+    　　})
+    </script>
+
+    <script type="text/javascript">
+    　　$(function(){
+        $("#footer").load("common.html #footer");
+    　　})
+    </script>
+
 </head>
 
 
 <body>
-    <header id="header-outer"></header>
-    <nav id="menu-outer"></nav>
+    <header id="header"></header>
+    <nav id="menu"></nav>
     <main>
         <div id="main_visual">
             <div class="slider">
@@ -112,7 +131,8 @@
             </div>
         </div>
     </main>
-
+    <footer id="footer"></footer>
+    <div id="page_top"><a href="#"><img src="img/icon_arrow_top.png" alt="トップへ戻る"></a></div>
 
 
 <!-- jqueryの読み込み -->
