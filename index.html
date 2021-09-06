@@ -37,32 +37,38 @@
     }
 </script> -->
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript">
-    　　$(function(){
-        $("#header-outer").load("common.html #header");
-    　　})
-    </script>
+	<!-- #header,#menu,#footerをcommon.htmlから読み込むJavaScript -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+	　　$(function(){
+		$("#header-outer").load("common.html #header");
+	　　})
+	</script>
 
-    <script type="text/javascript">
-    　　$(function(){
-        $("#menu-outer").load("common.html #menu");
-    　　})
-    </script>
+	<script type="text/javascript">
+	　　$(function(){
+		$("#menu-outer").load("common.html #menu");
+	　　})
+	</script>
 
-    <script type="text/javascript">
-    　　$(function(){
-        $("#footer-outer").load("common.html #footer");
-    　　})
-    </script>
+	<script type="text/javascript">
+	　　$(function(){
+		$("#footer-outer").load("common.html #footer");
+	　　})
+	</script>
 
 </head>
 
 
 <body>
+    <!-- common.htmlから読み込んだ#headerをheaderタグとして配置 -->
     <header id="header-outer"></header>
+
+    <!-- common.htmlから読み込んだ#menuをnavタグとして配置 -->
     <nav id="menu-outer"></nav>
+
     <main>
+        <!-- スライドショー＋東工所イントロ -->
         <div id="main_visual">
             <div class="slider">
                 <div class="slider_item"><img src="img/visual01-min.jpg" alt="高輪ゲートウェイ駅" title="高輪ゲートウェイ駅"></div>
@@ -81,6 +87,8 @@
                 <p>お客さまの求める安全で品質の高いサービスを提供するとともに、すべての人の心豊かな生活の実現に貢献します。</p>
             </div>
         </div>
+
+        <!-- トップページの情報（Twitterタイムライン＋YouTube動画） -->
         <div id="top_info">
             <div class="twitter">
                 <h2><a href="https://twitter.com/JREast_official?s=20" target="_blank" rel="noopener noreferrer">東京工事事務所 公式Twitter</a></h2>
@@ -118,7 +126,11 @@
             </div>
         </div>
     </main>
+
+    <!-- common.htmlから読み込んだ#footerをfooterタグとして配置 -->
     <footer id="footer-outer"></footer>
+    
+    <!-- 「トップへ戻る」ボタン。位置等はcommon.cssで設定。 -->
     <div id="page_top"><a href="#"><img src="img/icon_arrow_top.png" alt="トップへ戻る"></a></div>
 
 
