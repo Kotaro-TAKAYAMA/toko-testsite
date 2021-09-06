@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- ★★★cutomize★★★ -->
+    <title>新宿駅｜JR東日本 東京工事事務所</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="東京工事事務所は、JR東日本の総合エンジニアリング部門として、首都圏・上信越エリアの駅・鉄道施設の新設・大規模改良を行っています。">
+    <meta name="keywords" content="JR東日本,JR,東京,工事,建設,東工所">
+
+	<!-- PCブラウザでタブに表示されるアイコン画像 -->
+    <link rel="shortcut icon" href="https://www.jreast.co.jp/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/reset.css">
+	<link rel="stylesheet" href="CSS/common.css">
+
+	<!-- #header,#menu,#footerをcommon.htmlから読み込むJavaScript -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+	　　$(function(){
+		$("#header-outer").load("common.html #header");
+	　　})
+	</script>
+
+	<script type="text/javascript">
+	　　$(function(){
+		$("#menu-outer").load("common.html #menu");
+	　　})
+	</script>
+
+	<script type="text/javascript">
+	　　$(function(){
+		$("#footer-outer").load("common.html #footer");
+	　　})
+	</script>
+
+</head>
+
+
+<body>
+	<!-- common.htmlから読み込んだ#headerをheaderタグとして配置 -->
+	<header id="header-outer"></header>
+
+	<!-- common.htmlから読み込んだ#menuをnavタグとして配置 -->
+	<nav id="menu-outer"></nav>
+
+<!-- 
+	====================================================================================
+	メインコンテンツここから　★★★cutomize★★★
+	====================================================================================
+ -->
+<!-- 
+	src="（画像保存先）"、alt="（代替文字）"を入力。
+	他の設定はそのまま（中央揃え、幅：100%、最大幅：1080px）
+ -->
+<main>
+<div style="width: fit-content; background-color: #fff; margin: 0 auto;">
+	<div style="text-align: center;">
+		<img src="img/03-02.jpg" alt="プロジェクト（新宿駅）" style="width: 100%; max-width: 980px;">
+	</div>
+</div>
+</main>	
+<!-- 
+	====================================================================================
+	メインコンテンツここまで
+	====================================================================================
+ -->
+
+
+<!-- common.htmlから読み込んだ#footerをfooterタグとして配置 -->
+<footer id="footer-outer"></footer>
+
+<!-- 「トップへ戻る」ボタン。位置等はcommon.cssで設定。 -->
+<div id="page_top"><a href="#"><img src="img/icon_arrow_top.png" alt="トップへ戻る"></a></div>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T6RWTC"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-T6RWTC');</script>
+<!-- End Google Tag Manager -->    
+		
+
+</body>
+</html>
