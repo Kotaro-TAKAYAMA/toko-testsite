@@ -1,0 +1,686 @@
+@charset "UTF-8";
+/* 
+=======================================================================================================
+◆◆common.css◆◆
+1. 全ページ共通の基本設定
+--余計なもののリセット（reset.cssで消しきれなかったもの）
+--フォント（種類・サイズ）
+--見出し・本文の段落スタイル設定
+2. ヘッダー（.header）の設定
+3. ナビゲーション（#menu）の設定
+4. トップへ戻るボタン（#btn_top）の設定
+5. フッター（#footer）の設定
+=======================================================================================================
+*/
+
+
+/* 
+-------------------------------------------------------------------------------------------------------
+1. 全ページ共通の基本設定
+-------------------------------------------------------------------------------------------------------
+*/
+
+/* 余白等を一旦リセット */
+* {
+	margin: 0;
+	padding:0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+/* リンクが貼ってある箇所の色が変わらないようにする */
+a,
+a:visited,
+a:hover,
+a:active {
+	color: inherit;
+}
+
+/* フォントをNoto Sans JPにする */
+/* @font-face {
+font-family: 'Noto Sans JP';
+src: url("../fonts/NotoSansJP-Regular.otf") format("woff");
+font-weight: 400;
+}
+@font-face {
+font-family: 'Noto Sans JP';
+src: url("../fonts/NotoSansJP-Bold.otf") format("woff");
+font-weight: 700;
+} */
+
+
+/* フォントサイズの設定 */
+html{
+  font-size: 62.5%; /*1rem=10pxにすることでコーディングしやすくする*/
+}
+body{
+font-family: 'Noto Sans JP', sans-serif;
+font-size:1.6rem;/* 16px*/
+line-height: 1.6;
+color: #ddd;
+letter-spacing: .05rem;
+font-weight: 400;
+background-color: #222;
+}
+h1 {
+font-size: 4rem;
+line-height: 1.3;
+}
+h2 {
+font-size: 2rem;
+line-height: 1.3;
+}
+
+/* フォントサイズの設定（スマホ） */
+@media (max-width: 695px) {/* 640px以下*/
+body {
+	font-size: 1.2rem;
+}
+h1{
+	font-size: 2.2rem;/* 24px*/
+}
+h2 {
+	font-size: 1.6rem;/* 20px*/
+}
+}
+  
+/* 段落スタイル（文字サイズ以外）の設定 */
+h1 {
+font-weight: 700;
+color: #eee;
+}
+h2 {
+font-weight: 700;
+border-left: #1e8702 solid 10px;
+margin-top: 10px;
+margin-bottom: 8px;
+padding: 1px 6px;
+color: #eee;
+}
+p {
+font-weight: 400;
+padding:0 16px;
+margin-top: 2px;
+}
+
+
+
+/* 
+-------------------------------------------------------------------------------------------------------
+2. ヘッダーの設定
+-------------------------------------------------------------------------------------------------------
+*/
+
+.header {
+  width: 100%;
+  position: relative; /*これないとz-indexが設定できない*/
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #333;
+}
+
+.corp_logo {
+  /* cursor: pointer; */
+  height: 100%;
+  background-color: #1e8702;
+  display: flex;
+  align-items: center;
+}
+
+
+.corp_logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 20px;
+  width: 180px;
+}
+
+.corp_logo a:hover {
+  opacity: 0.5;
+}
+
+.corp_logo img {
+  height: 28px;
+}
+
+.corp_logo span{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #eee;
+  padding-left: 10px;
+  line-height: 1;
+}
+
+
+.top_links {
+  height: 100%;
+  display: flex;
+}
+
+.top_link {
+  cursor: pointer; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin:0 15px;
+}
+
+
+.top_link a {
+  height: 100%;
+  /* word-break:break-all; */
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.top_link span{
+  display: none;
+  margin:0 10px;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.top_link img {
+  height: 20px;
+}
+
+.top_link a:hover {
+  opacity: 60%;
+}
+
+
+
+
+/* nav（メニュー） */
+#menu {
+  display: block;
+  height: 100%;
+  height: 50px;
+  background-color: #333;
+  position: relative; /*ie対応*/
+  top: -1px; /*スクロール時なぜか#menuの上にわずかな隙間ができるのでこれで対応*/
+  z-index: 1000; /*slickのcustom.cssで100が出てくるので1000にする*/
+}
+
+/*ie以外はsticky*/
+@supports (position: sticky) {
+  #menu {
+    position: sticky;
+  }
+}
+
+
+#menu ul {
+  display: flex;
+  height: 100%;
+}
+
+
+#menu ul li {
+  flex:1;
+  height: 100%;
+}
+
+
+
+#menu ul li a {
+  color:#eee;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#menu ul li a img {
+  height: 2.5rem;
+}
+
+
+#menu span {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+
+/* ホバー箇所の薄緑下線 */
+#menu a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-color: #A4DAAA;
+}
+
+
+/* メインメニューのホバー */
+#menu ul li:hover {
+  background-color: #444;
+}
+
+/* サブメニューの設定 */
+#menu ul li ul {
+  display: none;
+}
+
+#menu ul li:hover > ul {
+  display: block;
+}
+
+#menu ul li ul li {
+  height: 40px;
+  width: 100%;
+  background-color: #444;
+  border-top: #555 1px solid;
+  position: relative;
+  /*孫メニュ－のpositon:absolute;のため*/
+}
+
+#menu ul li ul li:hover {
+  background-color: #555;
+}
+
+/* サブサブメニューの設定 */
+#menu ul li ul li:hover > ul {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top:-1px; /*「東京駅」の上のわずかな隙間を解消*/
+}
+
+#menu ul li ul li ul {
+  width: 100%;
+}
+
+#menu ul li ul li ul li {
+  width: 100%;
+  background-color: #555;
+  border-top: #666 1px solid;
+  text-decoration: none;
+}
+
+#menu ul li ul li ul li:hover {
+  background-color: #666;
+  color: #222;
+}
+
+
+
+
+/* header・navレスポンシブ対応 */
+
+@media (min-width: 695px) {
+  /* .top_link span{
+    display: block;
+  } */
+
+  /* ロゴとタイトルを横並び */
+  #menu ul li a {
+    display: flex;
+    flex-flow: row;
+  }
+
+  /* menu文字の調整 */
+  #menu span{
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+  }
+
+}
+
+
+/*最低限のie対応（レイアウトが崩れるアイコン非表示）*/
+@media all and (-ms-high-contrast: none) {
+  .top_link img, #menu img {
+    display: none;
+  }
+
+}
+
+/* ヘッダー */
+
+.header {
+	width: 100%;
+	position: relative; /*これないとz-indexが設定できない*/
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	background-color: #333;
+  }
+  
+  .corp_logo {
+	/* cursor: pointer; */
+	height: 100%;
+	background-color: #1e8702;
+	display: flex;
+	align-items: center;
+  }
+  
+  
+  .corp_logo a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0 20px;
+	width: 180px;
+  }
+  
+  .corp_logo a:hover {
+	opacity: 0.5;
+  }
+  
+  .corp_logo img {
+	height: 28px;
+  }
+  
+  .corp_logo span{
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #eee;
+	padding-left: 10px;
+	line-height: 1;
+  }
+  
+  
+  /* top_linkを右に寄せる都合上、間にスペース入れる */
+  .top_links {
+	height: 100%;
+	display: flex;
+  }
+  
+  .top_link {
+	cursor: pointer; 
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin:0 15px;
+  }
+  
+  
+  .top_link a {
+	height: 100%;
+	/* word-break:break-all; */
+	margin: 0;
+	display: flex;
+	align-items: center;
+  }
+  
+  .top_link span{
+	display: none;
+	margin:0 10px;
+	font-size: 1.4rem;
+	line-height: 1.3;
+	white-space: nowrap;
+  }
+  
+  .top_link img {
+	height: 20px;
+  }
+  
+  .top_link a:hover {
+	opacity: 60%;
+  }
+  
+  
+  
+  
+  /* nav（メニュー） */
+  #menu {
+	display: block;
+	height: 100%;
+	height: 50px;
+	background-color: #333;
+	position: relative; /*ie対応*/
+	top: -1px; /*スクロール時なぜか#menuの上にわずかな隙間ができるのでこれで対応*/
+	z-index: 1000; /*slickのcustom.cssで100が出てくるので1000にする*/
+  }
+  
+  /*ie以外はsticky*/
+  @supports (position: sticky) {
+	#menu {
+	  position: sticky;
+	}
+  }
+  
+  
+  #menu ul {
+	display: flex;
+	height: 100%;
+  }
+  
+  
+  #menu ul li {
+	flex:1;
+	height: 100%;
+  }
+  
+  
+  
+  #menu ul li a {
+	color:#eee;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+  }
+  
+  #menu ul li a img {
+	height: 2.5rem;
+  }
+  
+  
+  #menu span {
+	font-size: 1rem;
+	line-height: 1.4;
+  }
+  
+  
+  /* ホバー箇所の薄緑下線 */
+  #menu a:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.3rem;
+	text-decoration-color: #A4DAAA;
+  }
+  
+  
+  /* メインメニューのホバー */
+  #menu ul li:hover {
+	background-color: #444;
+  }
+  
+  /* サブメニューの設定 */
+  #menu ul li ul {
+	display: none;
+  }
+  
+  #menu ul li:hover > ul {
+	display: block;
+  }
+  
+  #menu ul li ul li {
+	height: 40px;
+	width: 100%;
+	background-color: #444;
+	border-top: #555 1px solid;
+	position: relative;
+	/*孫メニュ－のpositon:absolute;のため*/
+  }
+  
+  #menu ul li ul li:hover {
+	background-color: #555;
+  }
+  
+  /* サブサブメニューの設定 */
+  #menu ul li ul li:hover > ul {
+	display: block;
+	position: absolute;
+	left: 100%;
+	top:-1px; /*「東京駅」の上のわずかな隙間を解消*/
+  }
+  
+  #menu ul li ul li ul {
+	width: 100%;
+  }
+  
+  #menu ul li ul li ul li {
+	width: 100%;
+	background-color: #555;
+	border-top: #666 1px solid;
+	text-decoration: none;
+  }
+  
+  #menu ul li ul li ul li:hover {
+	background-color: #666;
+	color: #222;
+  }
+  
+  
+  
+  
+  /* header・navレスポンシブ対応 */
+  
+  @media (min-width: 695px) {
+	/* .top_link span{
+	  display: block;
+	} */
+  
+	/* ロゴとタイトルを横並び */
+	#menu ul li a {
+	  display: flex;
+	  flex-flow: row;
+	}
+  
+	/* menu文字の調整 */
+	#menu span{
+	  font-size: 1.6rem;
+	  margin-left: 0.5rem;
+	}
+  
+  }
+  
+  
+  /*最低限のie対応（レイアウトが崩れるアイコン非表示）*/
+  @media all and (-ms-high-contrast: none) {
+	.top_link img, #menu img {
+	  display: none;
+	}
+  
+  }
+
+
+
+/* 「ページトップ」ボタン */
+#page_top{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 2000;
+  }
+  #page_top img {
+	height: 40px;
+	width: 40px;
+  }
+  
+  
+  /* ────────────────────────────────────────
+   フッター
+  ──────────────────────────────────────── */
+  #global_footer {
+	width: 100%;
+	background: #333;
+	padding: 10px;
+	margin-top: 30px;
+	position: relative;
+	z-index: 200;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  #global_footer .header {
+	max-width: 1080px;
+	margin: 0;
+  }
+  
+  
+  
+  #global_footer .corp_logo {
+	background: #333;
+  }
+  
+  #global_footer .corp_logo a{
+	margin: 0 10px;
+  }
+  
+  .footer_link {
+	border-top: 1px solid #ddd;
+	max-width: 1080px;
+	padding: 10px;
+  }
+  
+  .footer_link ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .footer_link ul li {
+	border-radius: 4px;
+	width: 300px;
+	display: block;
+	margin: 2px 2px;
+	background-color: #1e8702;
+	text-align: center;
+	padding: 3px 5px;
+  }
+  
+  .footer_link ul li a {
+	display: block;
+  }
+  
+  .footer_link ul li span {
+	font-size: 1.2rem;
+	margin-left: 5px;
+	color: #fff; /*本当は#dddで収めたかったが、背景色とのコントラスト比がNGになるのでやむを得ず真っ白に*/
+  }
+  
+  .footer_link img {
+	height: 1.2rem;
+  }
+  
+  .policy {
+	margin: 10px 0;
+	max-width: 1080px;
+  }
+  
+  .policy p {
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1.3;
+	margin: 0;
+	padding: 2px 10px ;
+  }
+  
+  .policy p.policy_link a {
+	display: inline-block;
+  }
+  
+  .policy img {
+	height: 1.2rem;
+  }
+  
+  /* .policy p.copyright {
+	font-size: 1rem;
+	font-weight: 300;
+  } */
