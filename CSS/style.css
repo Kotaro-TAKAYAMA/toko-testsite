@@ -87,6 +87,9 @@
 }
 
 
+.youtube p {
+  font-size: 1.2rem;
+}
 
 .video iframe {
   position: absolute;

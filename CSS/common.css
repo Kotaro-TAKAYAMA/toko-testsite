@@ -439,18 +439,19 @@ margin-top: 2px;
 }
 
 
+/* position:sticky関係のみ、埋め込んでいる箱の方（#header-outer）に指定しなきゃいけない */
 #menu-outer {
   position: relative; /*ie対応*/
   top: -1px; /*スクロール時なぜか#menuの上にわずかな隙間ができるのでこれで対応*/
   z-index: 1000; /*slickのcustom.cssで100が出てくるので1000にする*/
 }
 
-  /*ie以外はsticky*/
-  @supports (position: sticky) {
-	#menu-outer {
-	  position: sticky;
-	}
-  }
+/*ie以外はsticky*/
+@supports (position: sticky) {
+#menu-outer {
+  position: sticky;
+}
+}
   
 
 
