@@ -40,7 +40,7 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
     　　$(function(){
-        $("#header-outer").load("common.html .header");
+        $("#header-outer").load("common.html #header");
     　　})
     </script>
 
@@ -50,22 +50,9 @@
     　　})
     </script>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
     　　$(function(){
-        $("#header").load("common.html #header");
-    　　})
-    </script>
-
-    <script type="text/javascript">
-    　　$(function(){
-        $("#menu").load("common.html #menu");
-    　　})
-    </script>
-
-    <script type="text/javascript">
-    　　$(function(){
-        $("#footer").load("common.html #footer");
+        $("#footer-outer").load("common.html #footer");
     　　})
     </script>
 
@@ -73,8 +60,8 @@
 
 
 <body>
-    <header id="header"></header>
-    <nav id="menu"></nav>
+    <header id="header-outer"></header>
+    <nav id="menu-outer"></nav>
     <main>
         <div id="main_visual">
             <div class="slider">
@@ -131,7 +118,7 @@
             </div>
         </div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer-outer"></footer>
     <div id="page_top"><a href="#"><img src="img/icon_arrow_top.png" alt="トップへ戻る"></a></div>
 
 
