@@ -596,7 +596,7 @@ margin-top: 2px;
   /* ────────────────────────────────────────
    フッター
   ──────────────────────────────────────── */
-  #global_footer {
+  #footer {
 	width: 100%;
 	background: #333;
 	padding: 10px;
@@ -608,18 +608,56 @@ margin-top: 2px;
 	align-items: center;
   }
   
-  #global_footer .header {
-	max-width: 1080px;
-	margin: 0;
+  
+  #footer_header {
+    margin: 0;
+    max-width: 1080px;
+    /* position: relative;
+    z-index: 1000; */
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #333;
+  }
+  
+  .corp_logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   
   
+  .corp_logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 20px;
+    width: 180px;
+  }
   
-  #global_footer .corp_logo {
+  .corp_logo a:hover {
+    opacity: 0.5;
+  }
+  
+  .corp_logo img {
+    height: 28px;
+  }
+  
+  .corp_logo span{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #eee;
+    padding-left: 10px;
+    line-height: 1;
+  }
+  
+  
+  #footer .corp_logo {
 	background: #333;
   }
   
-  #global_footer .corp_logo a{
+  #footer .corp_logo a{
 	margin: 0 10px;
   }
   

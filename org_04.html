@@ -24,7 +24,7 @@
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 	　　$(function(){
-		$("#header-outer").load("common.html .header");
+		$("#header").load("common.html .header");
 	　　})
 	</script>
 
@@ -34,17 +34,29 @@
 	　　})
 	</script>
 
+	<script type="text/javascript">
+	　　$(function(){
+		$("#footer").load("common.html #menu");
+	　　})
+	</script>
+
 </head>
 
-<div id="header-outer"></div>
-<div id="menu"></div>
 
 <body>
+	<div id="header"></div>
+	<div id="menu"></div>
+	
 	<div style="text-align: center;">
 		<img src="img/visual03-min.jpg" alt="テスト配置" style="width: 100%; max-width: 1080px;">
 	</div>
 	<div style="text-align: center;">
 		<img src="img/visual02-min.jpg" alt="テスト配置" style="width: 100%; max-width: 1080px;">
 	</div>
+	
+	<div id="footer"></div>
+	
+	<div id="page_top"><a href="#"><img src="img/icon_arrow_top.png" alt="トップへ戻る"></a></div>
+
 </body>
 </html>
