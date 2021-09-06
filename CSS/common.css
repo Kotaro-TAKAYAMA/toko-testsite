@@ -436,18 +436,25 @@ margin-top: 2px;
 	height: 100%;
 	height: 50px;
 	background-color: #333;
-	position: relative; /*ie対応*/
-	top: -1px; /*スクロール時なぜか#menuの上にわずかな隙間ができるのでこれで対応*/
-	z-index: 1000; /*slickのcustom.cssで100が出てくるので1000にする*/
-  }
-  
+}
+
+
+#menu-outer {
+  position: relative; /*ie対応*/
+  top: -1px; /*スクロール時なぜか#menuの上にわずかな隙間ができるのでこれで対応*/
+  z-index: 1000; /*slickのcustom.cssで100が出てくるので1000にする*/
+}
+
   /*ie以外はsticky*/
   @supports (position: sticky) {
-	#menu {
+	#menu-outer {
 	  position: sticky;
 	}
   }
   
+
+
+
   
   #menu ul {
 	display: flex;
@@ -541,8 +548,7 @@ margin-top: 2px;
 	background-color: #666;
 	color: #222;
   }
-  
-  
+
   
   
   /* header・navレスポンシブ対応 */
