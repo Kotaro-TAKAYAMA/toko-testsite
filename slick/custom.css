@@ -1,4 +1,5 @@
 @charset 'UTF-8';
+/* 末尾のみ少しいじっている（2021.9.9追記） */
 /* Slider */
 .slick-loading .slick-list
 {
@@ -218,12 +219,4 @@
 .slick-prev {
     left: 15px;
     z-index: 100;
-}
-
-/*スライド画像の横幅可変*/
-.slider img {
-    width: 100vw;
-    max-width: 1200px;
-    /* min-width: 640px; */
-	/* height: 50vw; */
 }

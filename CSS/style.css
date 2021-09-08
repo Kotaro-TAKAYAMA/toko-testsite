@@ -1,20 +1,28 @@
 @charset "UTF-8";
+/* 
+=======================================================================================================
+◆◆style.css◆◆
+トップページのスタイル設定（他ページとの共通要素はcommon.css、sliderの中身はslick.css、custom.css）
+1. #main_visual（スライドショーと東工所イントロ文）の設定
+2. #top_info（Twitterタイムライン埋め込み＋YouTube動画埋め込み）の設定
+=======================================================================================================
+*/
 
-/* ---------
-メイン
---------- */
-
+/* 
+-------------------------------------------------------------------------------------------------------
+1. #main_visualの設定（index.htmlと紐付け）
+-------------------------------------------------------------------------------------------------------
+*/
 #main_visual {
-  position: relative; /* introをsliderの中央に配置するために設定 */
+  position: relative; /* PC版でintroをsliderの中央に配置するために設定 */
   margin-bottom: 30px;
 }
 
-
-
+/*SPファーストで作っている*/
 .intro {
-  margin: 0 ;
-  padding: 10px 20px;
-  background-color:#133318;
+  margin: 0;
+  padding: 20px; /*緑で塗っている所のpadding*/
+  background-color:rgba(19,51,24);
 }
 
 .intro h1 {
@@ -27,89 +35,92 @@
 }
 
 .intro p {
-  padding: 0 5px;
+  padding: 0 5px; /*デフォルトの設定では広くなっている左右のpaddingを5pxまで縮小*/
 }
 
 
+/* レスポンシブ対応（introをスライドショーと重ねる仕様に）*/
+@media (min-width:695px) {
+  .intro {
+    width: 80%;
+    max-width: 910px; /*2文目がギリギリ改行されない幅を最大幅に設定*/
+    background-color: rgba(19,51,24,0.7); /*PC版では背景の濃緑の不透明度70%*/
+    position: absolute; /*#main_visualでposition:relative;を設定することで、sliderの左上を基準とする相対位置指定とする*/
+    top: 50%; /*以下3行でsliderの中心に.introを配置している（仕組みは調べてください）*/
+    left: 50%;
+    transform: translate(-50% , -50%);
+  }
+}
 
+/* 
+-------------------------------------------------------------------------------------------------------
+2. #top_infoの設定（index.htmlと紐付け）
+※埋め込んでいるコンテンツのスタイルはは基本的にhtml内で設定。一部のみstyle.cssで設定。
+-------------------------------------------------------------------------------------------------------
+*/
+/* スマホfirestで作っている */
 #top_info {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*（以下3行）縦並べ・中心*/
   justify-content: center;
   align-items: center;
 }
 
+/*twitterが入る枠（PC表示の場合左半分）*/
 .twitter {
   max-width: 450px;
   margin: 10px;
 }
 
+.fig {
+  margin: 10px auto;
+}
+
+/* Twitter利用規約 */
 .twitter_reg {
   padding: 0 16px;
 }
-
 .twitter_reg img {
   height: 1.2rem;
 }
-
 .twitter_reg span {
   font-size: 1.2rem;
-  margin: 0 5px;
+  margin-left: 5px; /*「別タブで開く」アイコンと文字の間の隙間*/
 }
 
 
+/*YouTubeが入る枠（PC表示の場合右半分）*/
 .youtube {
   max-width: 600px;
   margin: 10px;
 }
 
-
-.fig {
-  margin: 10px auto;
-}
-
+/* YouTube動画1個1個の設定 */
 .video {
-  margin: 10px auto;
-  position: relative;
-  width: 100%;
+  margin: 10px auto; /*10pxは前後の動画との隙間。横幅はauto*/
+  position: relative; /*後述のiframeのposition:absolute;の基準。*/
+  width: 100%; /*width:100%とpadding-top:56.25%でサムネイルが16:9になる。*/
   padding-top: 56.25%;
 }
 
-
+/*ホームドア動画の注釈だけのためのスタイル。*/
 .youtube p {
   font-size: 1.2rem;
 }
 
 .video iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
+  position: absolute; /*.videoでpositoin:relative;を設定したことで、.video枠の左上を起点とする相対位置指定とする。*/
+  top: 0; /*（縦方向）.videoの上から0pxのところに配置。*/
+  left: 0; /*（横方向）.videoの左から0pxのところに配置。*/
+  width: 100%; /*.videoで設定した16:9の枠にめいいっぱい入るサイズ*/
   height: 100%;
 }
 
 
 /* レスポンシブ。introの位置変更とTwitterとYouTubeを横並び */
 @media (min-width:695px) {
-  .intro {
-    width: 80%;
-    max-width: 910px;
-    width: 100%;
-    background-color: rgba(19,51,24,0.7);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    padding: 20px;
-  }
-
-  
   #top_info {
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: row; /*#top_infoの要素（.Twitterと.YouTube）行方向（横方向）並べ*/
+    align-items: stretch; /*各要素を上揃え*/
   }
-
-
 }
-
-

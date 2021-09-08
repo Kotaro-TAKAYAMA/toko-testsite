@@ -95,15 +95,15 @@
         <!-- トップページの情報（Twitterタイムライン＋YouTube動画） -->
         <div id="top_info">
             <div class="twitter">
-                <h2><a href="https://twitter.com/JREast_official?s=20" target="_blank" rel="noopener">東京工事事務所 公式Twitter</a></h2>
+                <h2>東京工事事務所 公式Twitter</a></h2>
                 <p>首都圏・上信越エリアの駅の開発や改良、線路切換などの鉄道建設工事の状況や駅・まちの変化の様子などJR東日本の建設工事のさまざまな情報をお届けします。</p>
                 <div class="fig">
-                    <a class="twitter-timeline" data-width="100%" data-height="100vh" data-theme="light" href="https://twitter.com/JREast_official?ref_src=twsrc%5Etfw">［Twitterへ移動］</a> <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a class="twitter-timeline" data-width="100%" data-height="100vh" data-theme="light" href="https://twitter.com/JREast_official?ref_src=twsrc%5Etfw">［Twitterへ移動］</a><script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="twitter_reg"><a href="#"><img src="img/ico_square.png"><span>JR東日本 東京工事事務所 公式Twitter 利用規約</span></a></div>
             </div>
             <div class="youtube">
-                <h2><a href="https://www.youtube.com/channel/UCioFlMsGwVfA-uWnn0ZWo_Q" target="_blank" rel="noopener">JR東日本 公式YouTube</a></h2>
+                <h2>JR東日本 公式YouTube</a></h2>
                 <p>東京工事事務所のプロジェクトや技術に関する動画を抜粋して紹介します。</p>
                 <div class="video">
                     <!-- iframe内で設定されているwidth,heightを削除。CSSで別途設定。 -->
@@ -118,10 +118,6 @@
                     <!-- 川崎デルタ -->
                     <iframe src="https://www.youtube.com/embed/og5WzUevP1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- <div class="video">
-                    <iframe src="https://www.youtube.com/embed/9BAY0CMiIoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    高輪GW
-                </div> -->
                 <div class="video">
                     <!-- ホームドア（東京支社） -->
                     <iframe src="https://www.youtube.com/embed/cai2W3aexeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -145,15 +141,15 @@
 <!-- slick動かす命令 -->
 <script>
     $('.slider').slick({
-        autoplay:true,
-        autoplaySpeed: 5000,
-        dots:true,
-        arrows:true,
-        variableWidth: true,
-        centerMode: true,
-        pauseOnFocus: false, /*謎に止まるのを防ぐコマンド*/
-        pauseOnHover: false, /*謎に止まるのを防ぐコマンド*/
-        pauseOnDotsHover: false,  /*謎に止まるのを防ぐコマンド*/
+        autoplay:true, //自動で動く
+        autoplaySpeed: 5000, //5秒で遷移 
+        dots:true, //画像下のドットあり
+        arrows:true, //画像左右の矢印あり
+        variableWidth: true, //可変幅サイズ（画面幅が画像横幅の960pxより狭いときは画像幅＝画面幅になり、それより広いときは両隣の画像が垣間見える
+        centerMode: true, //画像を中央に配置
+        pauseOnFocus: false, //謎に止まるのを防ぐコマンド
+        pauseOnHover: false, //謎に止まるのを防ぐコマンド
+        pauseOnDotsHover: false, //謎に止まるのを防ぐコマンド
     });
 </script>
 

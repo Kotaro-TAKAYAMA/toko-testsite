@@ -6,7 +6,7 @@
 --余計なもののリセット（reset.cssで消しきれなかったもの）
 --フォント（種類・サイズ）
 --見出し・本文の段落スタイル設定
-2. ヘッダー（.header）の設定
+2. ヘッダー（#header）の設定
 3. ナビゲーション（#menu）の設定
 4. パンくずリスト（#pankuzu）の設定
 5. トップページ以外の画像配置エリア（.img_box）の設定
@@ -38,17 +38,20 @@ a:active {
 	color: inherit;
 }
 
-/* フォントをNoto Sans JPにする */
-/* @font-face {
+/* 
+フォントをNoto Sans JPにする。
+ただしGoogleからダウンロードしたままのデータは重いのでウェイトは2つで軽量化済み。
+ */
+@font-face {
 font-family: 'Noto Sans JP';
-src: url("../fonts/NotoSansJP-Regular.otf") format("woff");
+src: url("../fonts/NotoSansJP-Regular_min.woff") format("woff");
 font-weight: 400;
 }
 @font-face {
 font-family: 'Noto Sans JP';
-src: url("../fonts/NotoSansJP-Bold.otf") format("woff");
+src: url("../fonts/NotoSansJP-Bold_min.woff") format("woff");
 font-weight: 700;
-} */
+}
 
 
 /* フォントサイズの設定 */
@@ -110,38 +113,41 @@ margin-top: 2px;
 
 /* 
 -------------------------------------------------------------------------------------------------------
-2. ヘッダーの設定（common.htmlと紐付け）
+2. ヘッダー（#header）の設定（common.htmlと紐付け）
 -------------------------------------------------------------------------------------------------------
 */
 
 #header {
   width: 100%; /* ページ全幅をheader要素に*/
-  position: relative; /*これないとz-indexが設定できない*/
-  z-index: 1000; 
-  display: flex;
-  justify-content: space-between;
+  display: flex; /*#header内横並び*/
+  justify-content: space-between; /*#header内要素を両端寄せ*/
   height: 50px;
   background-color: #333;
 }
-
+/* 
+---------------------------------------------------
+「JR東日本 東京工事事務所」の設定
+---------------------------------------------------
+ */
 .corp_logo {
   height: 100%;
   background-color: #1e8702;
-  padding: 0 20px;
+  padding: 0 20px; /*左右20px外側まで緑色に塗る*/
   color: #eee; /*ヘッダーなので少し文字色明るめ*/
-  display: flex;
+  display: flex; /*↓と連携して.corp_logo aを縦横方向に中央寄せ*/
   align-items: center;
+  justify-content: center;
 }
 
 
 .corp_logo a {
-  display: flex;
+  width: 180px; /*ここで幅を指定しないとieで「東京工事事務所」の文字が折り返してしまう*/
+  display: flex; /*↓と連携してimgとspanを縦横方向中央寄せ*/
   align-items: center;
   justify-content: center;
-  padding: 0;
-  width: 180px;
 }
 
+/* ホバー時透明度50% */
 .corp_logo a:hover {
   opacity: 0.5;
 }
@@ -153,40 +159,43 @@ margin-top: 2px;
 .corp_logo span{
   font-size: 1.8rem;
   font-weight: 700;
-  padding-left: 10px;
+  padding-left: 10px; /*「JR東日本」と「東京工事事務所」の間に10pxの隙間を開ける*/
   line-height: 1;
 }
 
-
+/* 
+---------------------------------------------------
+Twitter/YouTubeアイコンの設定
+---------------------------------------------------
+*/
+/* 高さを#headerから継承して横並び */
 .top_links {
   height: 100%;
   display: flex;
 }
 
 .top_link {
-  cursor: pointer; 
-  height: 100%;
-  display: flex;
+  height: 100%; /* 高さを#headerから継承 */
+  width: 50px;
+  display: flex; /* ↓と連携して.top_link内の要素（.top_link a）を縦横方向中央寄せ */
   align-items: center;
-  margin:0 15px;
+  justify-content: center;
 }
-
 
 .top_link a {
-  height: 100%;
-  margin: 0;
-  display: flex;
+  display: flex; /* ↓と連携してaタグ内の要素（アイコンのimg）を縦方向中央寄せ */
   align-items: center;
 }
 
-
 .top_link img {
-  height: 20px;
+  width: 20px;
 }
 
+/* ホバー時透明度50% */
 .top_link a:hover {
   opacity: 0.5;
 }
+
 
 
 /* 
@@ -362,7 +371,7 @@ margin-top: 2px;
 @supports (position: sticky) {
   #menu-outer {
     position: sticky;
-    top: 0;
+    top: 0; /*上から0pxのところにくっつかせる*/
   }
 }
 
@@ -430,91 +439,103 @@ width: 40px;
 7. フッター（#footer）の設定（commn.htmlと紐付け）
 -------------------------------------------------------------------------------------------------------
 */
- #footer {
-	width: 100%;
+
+#footer {
+	width: 100%; /*横幅全幅*/
 	background: #333;
-  margin-top: 30px;
-	padding: 10px;
-	position: relative;
-	z-index: 200;
-	display: flex;
+  margin-top: 30px; /*上部に30pxのmargin（コンテンツとの離隔を確保）*/
+	padding: 10px; /*上下左右に10pxのpadding（#333で塗られている内側で上下左右に10pxずつ余白確保）*/
+	/* position: relative; このへんいるのか？
+	z-index: 200; */
+	display: flex; /*↓2行と連携し、要素を縦並べ、中央揃え*/
 	flex-direction: column;
 	align-items: center;
 }
-  
-  
+
+/* 
+---------------------------------------------------
+フッター内のタイトル・SNSアイコン
+（#headerと似ているが扱いが異なるので別idを設定）
+---------------------------------------------------
+*/
 #footer_header {
   margin: 0;
   width: 100%;
-  max-width: 1080px;
-  display: flex;
-  justify-content: space-between;
   height: 50px;
-  background-color: #333;
-}
-  
-#footer .corp_logo {
-background: #333;
+  max-width: 1080px; /*#header,#menu,#main_visual（スライダー）以外は1080pxより横幅広げない*/
+  display: flex; /*headerと同じく横並び*/
+  justify-content: space-between; /*.corp_logoと.top_linksを両端揃え*/
+  border-bottom: 1px solid #ddd; /*境界線*/
 }
 
-  .footer_link {
-	border-top: 1px solid #ddd;
+/* .corp_logo .top_links .top_link等は原則#headerのところと同じスタイルを使用。#footer内で変えるところだけ以下に記述。 */
+#footer_header .corp_logo {
+  background: #333; /*緑塗りをグレー塗りに変更*/
+  padding: 0 10px; /*#footerに10pxのpaddingが設定されている関係で、横幅が320pxのときは#footer_headerの横幅が不足する（はみ出る）。そこで、.corp_logoの両端のpaddingを20px→10pxに縮小する。*/
+}
+
+
+/* 
+---------------------------------------------------
+JR内関係ページへのリンク集
+---------------------------------------------------
+*/
+.footer_link {
 	max-width: 1080px;
-	padding: 10px;
-  }
+	margin: 10px 0; /*上下のみ10pxのmargin*/
+}
   
-  .footer_link ul{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-  }
-  
-  .footer_link ul li {
-	border-radius: 4px;
-	width: 300px;
-	display: block;
-	margin: 2px 2px;
-	background-color: #1e8702;
-	text-align: center;
-	padding: 4px 5px;
-  }
-  
-  .footer_link ul li a {
-	display: block;
-  }
-  
-  .footer_link ul li span {
-	font-size: 1.2rem;
-	margin-left: 5px;
-	color: #fff; /*本当は#dddで収めたかったが、背景色とのコントラスト比がNGになるのでやむを得ず真っ白に*/
-  }
-  
-  .footer_link img {
-	height: 1.2rem;
-  }
-  
-  .policy {
-	margin: 10px 0;
-	max-width: 1080px;
-  }
-  
-  .policy p {
-	text-align: center;
-	font-size: 1rem;
-	line-height: 1.3;
-	margin: 0;
-	padding: 2px 10px ;
-  }
-  
-  .policy p.policy_link a {
-	display: inline-block;
-  }
-  
-  .policy img {
-	height: 1.2rem;
-  }
-  
-  /* .policy p.copyright {
-	font-size: 1rem;
-	font-weight: 300;
-  } */
+.footer_link ul{
+  display: flex; /*リンクは横並び*/
+  flex-wrap: wrap; /*折り返しあり*/
+  justify-content: center; /*左右真ん中寄せ*/
+}
+
+.footer_link ul li {
+  border-radius: 4px; /*角丸*/
+  width: 300px;
+  display: block;
+  margin: 3px;
+  background-color: #1e8702;
+  text-align: center;
+  padding: 4px 5px;
+}
+
+.footer_link ul li a {
+display: block; /*これを設定しないとimg+spanの幅にしかリンクが設定されない（緑の四角のどこを押してもリンクが飛ぶようにしたい）*/
+}
+
+.footer_link ul li img {
+  height: 1.2rem;
+  margin-right: 5px; /*「別リンクで開く」アイコンと文字の間に5pxの隙間*/
+}
+
+.footer_link ul li span {
+font-size: 1.2rem;
+color: #fff; /*本当は#dddで収めたかったが、背景色とのコントラスト比がNGになるのでやむを得ず真っ白に*/
+}
+
+
+/* 
+---------------------------------------------------
+利用規約
+---------------------------------------------------
+*/
+.policy {
+max-width: 1080px;
+margin: 10px 0; /*上下のみ10pxのmargin*/
+}
+
+/*通常のpタグより文字を小さくするのでそれに合わせて行間・段落間スペースの調整*/
+.policy p {
+text-align: center;
+font-size: 1rem;
+line-height: 1.3;
+margin: 0;
+padding: 2px 10px ;
+}
+
+.policy img {
+height: 1rem;
+margin-right: 5px; /*「別リンクで開く」アイコンと文字の間に5pxの隙間*/
+}
