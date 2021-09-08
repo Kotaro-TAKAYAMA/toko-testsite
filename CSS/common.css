@@ -409,6 +409,7 @@ Twitter/YouTubeアイコンの設定
   background-color: #fff; /*（画像が白背景なので）img_boxも白背景に*/
   margin: 0 auto; /*img_box自体を中央揃え*/
   width: fit-content; /*画像に横幅を合わせる*/
+  max-width: 980px; /*width:fit-content;がie非対応のため追加（画像の幅は最大980pxにしているのでこれで同値だがhtmlにもcssにも同じことを書いている）。*/
 }
 /* ※画像自体の幅はhtmlで設定している（100%が原則だが上限980pxまで） */
 
