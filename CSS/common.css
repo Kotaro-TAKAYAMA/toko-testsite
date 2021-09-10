@@ -566,6 +566,6 @@ margin-right: 5px; /*「別リンクで開く」アイコンと文字の間に5p
 }
 
 /* リンクホバー時色変え */
-.policy span:hover {
+.policy a:hover {
   opacity: 0.5;
 }
