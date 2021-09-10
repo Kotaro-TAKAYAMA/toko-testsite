@@ -40,13 +40,13 @@ h3 {
 }
 
 /* resetしているul,olを再定義*/
-ul {
+.twitter_reg ul {
 	margin: 1em 0;
 	padding-left: 30px;
 	padding-right: 10px;
 	list-style-type: disc;
 }
-ol {
+.twitter_reg ol {
 	margin: 1em 0;
 	padding-left: 30px;
 	padding-right: 10px;
