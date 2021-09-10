@@ -256,6 +256,10 @@ Twitter/YouTubeアイコンの設定
   height: 25px;
   width: 25px; /*heightとwidth両方設定しないとieで表示崩れる*/
 }
+#menu ul li:nth-child(4) a img {
+  width: 42.6px; /*heightとwidthを両方指定しないとieで表示崩れる。採用情報アイコンだけ横幅が異なるので個別指定。*/
+}
+
 #menu span {
   font-size: 1rem;
   line-height: 1.4;
@@ -311,8 +315,9 @@ Twitter/YouTubeアイコンの設定
 }
 
 /* 採用情報の別タブ明示アイコンの設定（SP） */
-#menu ul li ul li img {
+#menu ul li:nth-child(4) ul li a img {
   height: 1rem;
+  width: 1rem; /*これもheightとwidthの両方設定しないとieで表示崩れる。「採用情報」のところで使っているli:nth-child(4)の影響でこのアイコンもli:nth-child(4)を使って設定するしかない（#menu ul li ul li a imgではダメ）。*/
   margin-right: 5px;
 }
 
@@ -365,8 +370,9 @@ Twitter/YouTubeアイコンの設定
     margin-left: 0.5rem;
   }
   /* 採用情報の別タブ明示アイコンの文字を大きく */
-  #menu ul li ul li img {
+  #menu ul li:nth-child(4) ul li a img {
     height: 1.6rem;
+    width: 1.6rem; /*これもheightとwidthの両方設定しないとieで表示崩れる。「採用情報」のところで使っているli:nth-child(4)の影響でこのアイコンもli:nth-child(4)を使って設定するしかない（#menu ul li ul li a imgではダメ）。（SP表示のときと同じ）*/
   }
 }
 
