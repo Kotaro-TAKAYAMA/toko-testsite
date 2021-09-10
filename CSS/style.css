@@ -88,7 +88,7 @@
   margin-left: 5px; /*「別タブで開く」アイコンと文字の間の隙間*/
 }
 /* リンクホバー時色変え */
-.twitter_reg span:hover {
+.twitter_reg a:hover {
 	opacity: 0.5;
 }
 

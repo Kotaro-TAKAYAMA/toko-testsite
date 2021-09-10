@@ -67,6 +67,6 @@ h3 {
 
 
 /* リンクホバー時色変え */
-.twitter_reg span:hover {
+.twitter_reg a:hover {
 	opacity: 0.5;
 }

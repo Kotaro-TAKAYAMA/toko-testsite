@@ -58,6 +58,6 @@ small {
 }
 
 /* リンクホバー時色変え */
-.faq span:hover {
+.faq a:hover {
 	opacity: 0.5;
 }
