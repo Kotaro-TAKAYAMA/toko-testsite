@@ -87,7 +87,10 @@
   font-size: 1.2rem;
   margin-left: 5px; /*「別タブで開く」アイコンと文字の間の隙間*/
 }
-
+/* リンクホバー時色変え */
+.twitter_reg span:hover {
+	opacity: 0.5;
+}
 
 /*YouTubeが入る枠（PC表示の場合右半分）*/
 .youtube {

@@ -1,22 +1,21 @@
 @charset "UTF-8";
 /* 
 =======================================================================================================
-◆◆faq.css◆◆
+◆◆twitter_reg.css◆◆
 FAQの設定。文章が多いページなので他のページより余白をかなり広げている。
 =======================================================================================================
 */
 
 /* 中央揃えとコンテンツ幅の設定 */
-/*mainタグを制御すれば1階層少なくて済むが、ieがmainタグを使えないので苦肉の策でdivタグ（#faq）を作ってそれで制御*/
-#faq {
+/*mainタグを制御すれば1階層少なくて済むが、ieがmainタグを使えないので苦肉の策でdivタグ（#twitter_reg）を作ってそれで制御*/
+#twitter_reg {
 	margin: 10px auto;
 	width: 100%;
 	max-width: 1080px;
 }
 
-/* セクションごとにマージン */
-.faq_content {
-	margin: 35px 10px;
+.twitter_reg_content {
+	margin: 10px;
 }
 
 /* タイトル（基本トップページと同じ） */
@@ -29,12 +28,10 @@ h1 {
 	text-align: center;
 }
 
-/* Questionの種類 */
 h2 {
 	margin-top: 25px;
 }
 
-/* Question */
 h3 {
 	margin-top: 25px;
 	margin-bottom: 8px;
@@ -42,20 +39,32 @@ h3 {
 	padding: 4px 14px;
 }
 
-/* 注釈（インライン要素） */
-small {
-	font-size: 1.2rem;
+/* resetしているul,olを再定義*/
+ul {
+	margin: 1em 0;
+	padding-left: 30px;
+	padding-right: 10px;
+	list-style-type: disc;
+}
+ol {
+	margin: 1em 0;
+	padding-left: 30px;
+	padding-right: 10px;
+	list-style-type: decimal;
 }
 
+
 /* 別タブ明示アイコンサイズ（PCとSPで高さ変える） */
-.faq_content img {
+.twitter_reg_content img {
 	height: 1.6rem;
 }
 @media (max-width:695px) {
-	.faq_content img {
+	.twitter_reg_content img {
 		height: 1.2rem;
 	}
 }
+
+
 
 /* リンクホバー時色変え */
 span:hover {
