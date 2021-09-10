@@ -29,13 +29,13 @@
     <link rel="stylesheet" href="CSS/common.css">
     <link rel="stylesheet" href="CSS/style.css">
 
-<script>
+<!-- <script>
     var pw = prompt("合言葉を入力してください。");
     if (pw==="shinjuku") {}else{
         alert("違います。JR東日本トップページにご案内します。");
         location.href = 'https://www.jreast.co.jp/';
     }
-</script>
+</script> -->
 
 	<!-- #header,#menu,#footerをcommon.htmlから読み込むJavaScript -->
 	<script src="js/jquery-3.6.0.min.js"></script>
@@ -145,7 +145,7 @@
         autoplaySpeed: 5000, //5秒で遷移 
         dots:true, //画像下のドットあり
         arrows:true, //画像左右の矢印あり
-        variableWidth: true, //可変幅サイズ（画面幅が画像横幅の960pxより狭いときは画像幅＝画面幅になり、それより広いときは両隣の画像が垣間見える
+        variableWidth: true, //可変幅サイズ 別途custom.cssの末尾行っている画像サイズの調整と合わせてきれいに仕上がる。（画面幅が狭いときは全体表示、1200pxより広い場合は画像サイズ一定でで両隣の写真が大きくなる）
         centerMode: true, //画像を中央に配置
         pauseOnFocus: false, //謎に止まるのを防ぐコマンド
         pauseOnHover: false, //謎に止まるのを防ぐコマンド
