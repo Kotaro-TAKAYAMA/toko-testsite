@@ -254,6 +254,7 @@ Twitter/YouTubeアイコンの設定
 }
 #menu ul li a img {
   height: 25px;
+  width: 25px; /*heightとwidth両方設定しないとieで表示崩れる*/
 }
 #menu span {
   font-size: 1rem;
