@@ -5,16 +5,20 @@
 FAQの設定。文章が多いページなので他のページより余白をかなり広げている。
 =======================================================================================================
 */
+
+/* 中央揃えとコンテンツ幅の設定 */
 main {
 	margin: 10px auto;
 	width: 100%;
 	max-width: 1080px;
 }
 
+/* セクションごとにマージン */
 .faq_content {
 	margin: 35px 10px;
 }
 
+/* タイトル（基本トップページと同じ） */
 h1 {
 	margin: 0;
 	margin-bottom: 3px;
@@ -24,10 +28,12 @@ h1 {
 	text-align: center;
 }
 
+/* Questionの種類 */
 h2 {
 	margin-top: 25px;
 }
 
+/* Question */
 h3 {
 	margin-top: 25px;
 	margin-bottom: 8px;
@@ -36,21 +42,23 @@ h3 {
 	padding: 4px 14px;
 }
 
+/* 注釈 */
 small {
 	font-size: 1.2rem;
 	margin: 0 16px;
 }
 
+/* 別タブ明示アイコンサイズ（PCとSPで高さ変える） */
 .faq_content img {
 	height: 1.6rem;
 }
-
 @media (max-width:695px) {
 	.faq_content img {
 		height: 1.2rem;
 	}
 }
 
+/* リンクホバー時色変え */
 span:hover {
 	color: #A4DAAA;
 }
