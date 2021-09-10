@@ -224,5 +224,5 @@
 /* 画像幅を設定（スマホ画面で写真が全体表示されるように） */
 .slider_item img {
     width: 100vw; 
-    max-width: 960px;
+    max-width: 1200px;
 }
