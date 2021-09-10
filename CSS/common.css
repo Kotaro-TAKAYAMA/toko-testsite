@@ -385,7 +385,7 @@ Twitter/YouTubeアイコンの設定
 @supports (position: sticky) {
   #menu-outer {
     position: sticky;
-    top: 0; /*上から0pxのところにくっつかせる*/
+    top: -1px; /*上から0pxのところにくっつかせる*/
   }
 }
 
