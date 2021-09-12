@@ -62,7 +62,7 @@ body{
   font-family: 'Noto Sans JP', sans-serif;
   font-size:1.6rem;/* 16px*/
   line-height: 1.6;
-  color: #ddd; /*すべての文字色が真っ白だとまぶしいのでデフォルトでは少し暗めにしておく*/
+  color: #eee; /*すべての文字色が真っ白だとまぶしいのでデフォルトでは少し暗めにしておく*/
   letter-spacing: .05rem;
   font-weight: 400;
   background-color: #222;
@@ -100,7 +100,7 @@ h3 {
 /* 段落スタイル（文字サイズ以外）の設定 */
 h1 {
   font-weight: 700;
-  color: #eee; /*見出しなので文字色明るめ*/
+  color: #fff; /*見出しなので文字色明るめ*/
 }
 h2 {
   font-weight: 700;
@@ -108,14 +108,14 @@ h2 {
   margin-top: 10px;
   margin-bottom: 8px;
   padding: 1px 6px;
-  color: #eee; /*見出しなので文字色明るめ*/
+  color: #fff; /*見出しなので文字色明るめ*/
   }
 h3 {
   font-weight: 700;
   margin-top: 8px;
   margin-bottom: 3px;
   padding: 0 4px;
-  color: #eee; /*見出しなので文字色明るめ*/
+  color: #fff; /*見出しなので文字色明るめ*/
 }
 p {
   font-weight: 400;
@@ -147,7 +147,7 @@ p {
   height: 100%;
   background-color: #1e8702;
   padding: 0 20px; /*左右20px外側まで緑色に塗る*/
-  color: #eee; /*ヘッダーなので少し文字色明るめ*/
+  color: #fff; /*ヘッダーなので少し文字色明るめ*/
   display: flex; /*↓と連携して.corp_logo aを縦横方向に中央寄せ*/
   align-items: center;
   justify-content: center;
@@ -226,7 +226,7 @@ Twitter/YouTubeアイコンの設定
   height: 50px;
   background-color: #333;
   top: -1px; /*スクロール時なぜか#menuの上にわずかな隙間ができるのでこれで対応*/
-  color:#eee;
+  color:#fff;
 }
 
 
