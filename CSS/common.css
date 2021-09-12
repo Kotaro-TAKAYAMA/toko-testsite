@@ -43,14 +43,16 @@ a:active {
 ただしGoogleからダウンロードしたままのデータは重いのでウェイトは2つで軽量化済み。
  */
 @font-face {
-font-family: 'Noto Sans JP';
-src: url("../fonts/NotoSansJP-Regular_min.woff") format("woff");
-font-weight: 400;
+  font-family: 'Noto Sans JP';
+  src: url("../fonts/NotoSansJP-Regular_min.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
 }
 @font-face {
-font-family: 'Noto Sans JP';
-src: url("../fonts/NotoSansJP-Bold_min.woff") format("woff");
-font-weight: 700;
+  font-family: 'Noto Sans JP';
+  src: url("../fonts/NotoSansJP-Bold_min.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
 }
 
 
