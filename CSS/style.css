@@ -111,10 +111,7 @@
   padding-top: 56.25%;
 }
 
-/*ホームドア動画の注釈だけのためのスタイル。*/
-.youtube small {
-  font-size: 1.2rem;
-}
+
 
 .video iframe {
   position: absolute; /*.videoでpositoin:relative;を設定したことで、.video枠の左上を起点とする相対位置指定とする。*/
