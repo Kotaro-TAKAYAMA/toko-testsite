@@ -97,20 +97,25 @@
 	opacity: 0.5;
 }
 
-/*YouTubeが入る枠（PC表示の場合右半分）*/
+/*YouTubeが入る枠（PC表示の場合右半分）いま不使用*/
 .youtube {
   max-width: 600px;
   margin: 10px;
 }
 
-/* YouTube動画1個1個の設定 */
+.youtube h3 {
+  margin-top: 20px;
+  padding: 1px 6px;
+  border-left: 10px #666 solid;
+}
+
+/* YouTube動画1個1個の設定 いま不使用 */
 .video {
   margin: 10px auto; /*10pxは前後の動画との隙間。横幅はauto*/
   position: relative; /*後述のiframeのposition:absolute;の基準。*/
   width: 100%; /*width:100%とpadding-top:56.25%でサムネイルが16:9になる。*/
   padding-top: 56.25%;
 }
-
 
 
 .video iframe {
