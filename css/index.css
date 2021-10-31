@@ -77,6 +77,10 @@
   margin: 10px auto;
 }
 
+.twitter-timeline {
+  max-height: 1000px;
+}
+
 /* Twitter利用規約 */
 .twitter_reg {
   padding: 0 16px;
