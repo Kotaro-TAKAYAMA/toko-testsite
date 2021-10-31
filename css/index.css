@@ -69,16 +69,12 @@
 /*twitterが入る枠（PC表示の場合左半分）*/
 .twitter {
   max-width: 450px;
+  max-height: 1000px;
   margin: 10px;
 }
 
 .fig {
   margin: 10px auto;
-}
-
-/* （ieなどで埋め込みが表示されず）［Twitterへ移動］が表示される場合のホバー設定 */
-.fig:hover {
-  opacity: 0.5;
 }
 
 /* Twitter利用規約 */
