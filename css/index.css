@@ -69,16 +69,11 @@
 /*twitterが入る枠（PC表示の場合左半分）*/
 .twitter {
   max-width: 450px;
-  max-height: 1000px;
   margin: 10px;
 }
 
 .fig {
   margin: 10px auto;
-}
-
-.twitter-timeline {
-  max-height: 1000px;
 }
 
 /* Twitter利用規約 */
