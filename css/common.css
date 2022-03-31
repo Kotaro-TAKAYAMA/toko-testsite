@@ -44,13 +44,13 @@ a:active {
  */
 @font-face {
   font-family: 'Noto Sans JP';
-  src: url("../fonts/NotoSansJP-Regular_min.woff") format("woff");
+  src: url("../fonts/notosansjp-regular_min.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: 'Noto Sans JP';
-  src: url("../fonts/NotoSansJP-Bold_min.woff") format("woff");
+  src: url("../fonts/notosansjp-bold_min.woff") format("woff");
   font-weight: 700;
   font-display: swap;
 }
