@@ -142,14 +142,13 @@ p {
 }
 /* 
 ---------------------------------------------------
-「JR東日本 東京工事事務所」の設定
+「JR東日本 東京建設PMO」の設定
 ---------------------------------------------------
  */
 .corp_logo {
   height: 100%;
   background-color: #1e8702;
   padding: 0 20px; /*左右20px外側まで緑色に塗る*/
-  color: #fff; /*ヘッダーなので少し文字色明るめ*/
   display: flex; /*↓と連携して.corp_logo aを縦横方向に中央寄せ*/
   align-items: center;
   justify-content: center;
@@ -157,11 +156,12 @@ p {
 
 
 .corp_logo a {
-  width: 180px; /*ここで幅を指定しないとieで「東京工事事務所」の文字が折り返してしまう*/
-  display: flex; /*↓と連携してimgとspanを縦横方向中央寄せ*/
+  width: 170px;
+  display: flex; 
   align-items: center;
   justify-content: center;
 }
+
 
 /* ホバー時透明度50% */
 .corp_logo a:hover {
@@ -169,14 +169,7 @@ p {
 }
 
 .corp_logo img {
-  height: 28px;
-}
-
-.corp_logo span{
-  font-size: 1.8rem;
-  font-weight: 700;
-  padding-left: 10px; /*「JR東日本」と「東京工事事務所」の間に10pxの隙間を開ける*/
-  line-height: 1;
+  height: 40px;
 }
 
 /* 
