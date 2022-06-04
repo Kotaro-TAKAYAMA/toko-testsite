@@ -20,9 +20,18 @@
 
 /*SPファーストで作っている*/
 .intro {
-  margin: 0;
+  margin: 0 auto;
   padding: 20px; /*緑で塗っている所のpadding*/
   background-color:rgba(19,51,24);
+}
+
+.centerlogo {
+  text-align: center;
+}
+
+.intro img{
+  width: 100%;
+  /* margin: 0 20px; */
 }
 
 .intro h1 {
