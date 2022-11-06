@@ -82,7 +82,8 @@
 }
 
 .fig {
-  margin: 10px;
+  max-width: 350px;
+  margin: 10px auto;
 }
 
 /* Twitter利用規約 */
