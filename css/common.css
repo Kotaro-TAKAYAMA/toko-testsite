@@ -265,7 +265,7 @@ Twitter/YouTubeアイコンの設定
   height: 25px;
   width: 25px; /*heightとwidth両方設定しないとieで表示崩れる*/
 }
-#menu ul li:nth-child(4) a img {
+#menu ul a img {
   width: 42.6px; /*heightとwidthを両方指定しないとieで表示崩れる。採用情報アイコンだけ横幅が異なるので個別指定。*/
 }
 
