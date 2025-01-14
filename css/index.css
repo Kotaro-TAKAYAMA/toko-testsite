@@ -61,6 +61,23 @@
   }
 }
 
+
+/* バナーの設定 */
+.top_banner {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.top_banner img {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+}
+
+
+
+
+
 /* 
 -------------------------------------------------------------------------------------------------------
 2. #top_infoの設定（index.htmlと紐付け）
